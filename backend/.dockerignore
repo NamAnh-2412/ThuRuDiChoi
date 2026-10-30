@@ -1,0 +1,5 @@
+target
+uploads
+application-local.properties
+.idea
+*.iml
