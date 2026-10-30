@@ -1,0 +1,92 @@
+:root,
+[data-theme='default'] {
+  --c-bg: #8ec5fc;
+  --c-bg-from: #c5e0ff;
+  --c-bg-to: #ffd0de;
+  --c-surface: #ffffff;
+  --c-paper: #fff9f0;
+  --c-accent: #ffb6c9;
+  --c-accent-pink: #ff8da1;
+  --c-ink: #2b3a67;
+  --c-tape: #ffd1ba;
+}
+
+[data-theme='spring'] {
+  --c-bg: #ffe3ec;
+  --c-bg-from: #ffe3ec;
+  --c-bg-to: #e8f8ee;
+  --c-surface: #ffffff;
+  --c-paper: #fff5f8;
+  --c-accent: #9adba8;
+  --c-accent-pink: #ff8da1;
+  --c-ink: #5b3a4a;
+  --c-tape: #b7e4c7;
+}
+
+[data-theme='summer'] {
+  --c-bg: #8edcf5;
+  --c-bg-from: #8edcf5;
+  --c-bg-to: #fff5d1;
+  --c-surface: #ffffff;
+  --c-paper: #f0faff;
+  --c-accent: #ffd36e;
+  --c-accent-pink: #ff6b8b;
+  --c-ink: #12456b;
+  --c-tape: #ffd36e;
+}
+
+[data-theme='autumn'] {
+  --c-bg: #ffd9b0;
+  --c-bg-from: #ffd9b0;
+  --c-bg-to: #fff0d9;
+  --c-surface: #fffdf8;
+  --c-paper: #fff6ea;
+  --c-accent: #d9824b;
+  --c-accent-pink: #c85a32;
+  --c-ink: #5a3420;
+  --c-tape: #e8a573;
+}
+
+[data-theme='winter'] {
+  --c-bg: #d6e8ff;
+  --c-bg-from: #d6e8ff;
+  --c-bg-to: #fde8f0;
+  --c-surface: #ffffff;
+  --c-paper: #f5f9ff;
+  --c-accent: #ffb6c9;
+  --c-accent-pink: #ff85a1;
+  --c-ink: #2b3a67;
+  --c-tape: #bce0fd;
+}
+
+.season-particle {
+  position: absolute;
+  top: -12%;
+  animation-name: season-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  pointer-events: none;
+  user-select: none;
+  font-size: 1.25rem;
+}
+
+@keyframes season-fall {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(24px, 110vh, 0) rotate(360deg);
+    opacity: 0.15;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .season-particle {
+    animation: none;
+    display: none;
+  }
+}
